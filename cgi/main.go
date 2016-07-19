@@ -8,7 +8,7 @@ import (
 
 func main() {
 	err := cgi.Serve(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		resp, err := http.Get("https://httpbin.org/get")
+		resp, err := http.Get("http://httpbin.org/get")
 		if err != nil {
 			w.Write([]byte(err.Error()))
 		} else {

@@ -16,6 +16,7 @@ func main() {
 			} else {
 				println(string(b))
 			}
+			w.Write([]byte("fake response"))
 		},
 	))
 }

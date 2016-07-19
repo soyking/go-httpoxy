@@ -8,6 +8,7 @@ import (
 )
 
 var (
+	port   = ":7070"
 	GOEXEC = "/usr/local/bin/go"
 	PWD    string
 )
@@ -26,5 +27,5 @@ func main() {
 		handler.ServeHTTP(w, r)
 	})
 
-	log.Fatal(http.ListenAndServe(":7070", nil))
+	log.Fatal(http.ListenAndServe(port, nil))
 }
